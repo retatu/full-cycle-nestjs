@@ -2,6 +2,7 @@ GET http://localhost:3000/orders
 ###
 POST http://localhost:3000/orders
 Content-Type: application/json
+x-api-token: 407a3c20-5ac6-4780-a1ed-fc719a673002
 
 {
   "amount": 123.12,
@@ -19,4 +20,4 @@ Content-Type: application/json
   "credit_card_number": "123123123"
 }
 ###
-DELETE  http://localhost:3000/orders/1f396d34-9bf0-4917-ba97-4ef8959c951e
+DELETE  http://localhost:3000/orders/7260460a-7a58-4e27-bbfd-45e4ec43a36c
