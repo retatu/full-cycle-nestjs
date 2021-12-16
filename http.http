@@ -1,0 +1,22 @@
+GET http://localhost:3000/orders
+###
+POST http://localhost:3000/orders
+Content-Type: application/json
+
+{
+  "amount": 123.12,
+  "credit_card_name": "Matheus Rehbein",
+  "credit_card_number": "123123123"
+}
+###
+GET http://localhost:3000/orders/1f396d34-9bf0-4917-ba97-4ef8959c951e
+###
+PATCH  http://localhost:3000/orders/1f396d34-9bf0-4917-ba97-4ef8959c951e
+Content-Type: application/json
+
+{
+  "amount": 331.12,
+  "credit_card_number": "123123123"
+}
+###
+DELETE  http://localhost:3000/orders/1f396d34-9bf0-4917-ba97-4ef8959c951e
