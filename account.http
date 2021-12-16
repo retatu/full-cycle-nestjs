@@ -1,0 +1,19 @@
+GET http://localhost:3000/accounts
+###
+POST http://localhost:3000/accounts
+Content-Type: application/json
+
+{
+  "name": "Matheus"
+}
+###
+GET http://localhost:3000/accounts/bf9064ca-4acb-4b39-a608-c20b1931e471
+###
+PATCH  http://localhost:3000/accounts/bf9064ca-4acb-4b39-a608-c20b1931e471
+Content-Type: application/json
+
+{
+  "name": "Matheus Rehbein"
+}
+###
+DELETE  http://localhost:3000/accounts/bf9064ca-4acb-4b39-a608-c20b1931e471
