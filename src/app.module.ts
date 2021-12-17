@@ -1,5 +1,4 @@
 import { Module } from '@nestjs/common';
-import { SequelizeModule } from '@nestjs/sequelize';
 import { join } from 'path/posix';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
@@ -7,6 +6,7 @@ import { Order } from './orders/entities/order.entity';
 import { OrdersModule } from './orders/orders.module';
 import { AccountsModule } from './accounts/accounts.module';
 import { Account } from './accounts/entities/account.entity';
+import { SequelizeModule } from '@nestjs/sequelize';
 
 @Module({
   imports: [
