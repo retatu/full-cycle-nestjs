@@ -1,8 +1,9 @@
 GET http://localhost:3000/orders
+x-token: 5ziejcw5t5q
 ###
 POST http://localhost:3000/orders
 Content-Type: application/json
-x-api-token: 407a3c20-5ac6-4780-a1ed-fc719a673002
+x-token: 5ziejcw5t5q
 
 {
   "amount": 123.12,

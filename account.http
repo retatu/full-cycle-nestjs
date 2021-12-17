@@ -7,7 +7,7 @@ Content-Type: application/json
   "name": "Matheus"
 }
 ###
-GET http://localhost:3000/accounts/bf9064ca-4acb-4b39-a608-c20b1931e471
+GET http://localhost:3000/accounts/9d275bb5-e8ce-41a7-9287-ac1ef7f1b665
 ###
 PATCH  http://localhost:3000/accounts/bf9064ca-4acb-4b39-a608-c20b1931e471
 Content-Type: application/json
