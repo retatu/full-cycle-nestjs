@@ -13,7 +13,7 @@ import {
 })
 export class Account extends Model {
   @PrimaryKey
-  @Column({ type: DataType.UUID, defaultValue: DataType.UUIDV4 })
+  @Column({ type: DataType.UUID, defaultValue: DataType.UUID })
   id: string;
 
   @Column({ allowNull: false })

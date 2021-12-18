@@ -12,11 +12,16 @@ import { ConfigModule } from '@nestjs/config';
 //ES7 Decorators - Documentar ou estender
 @Module({
   imports: [
+    ConfigModule.forRoot(),
     OrdersModule,
     ConfigModule.forRoot(),
     SequelizeModule.forRoot({
-      dialect: 'sqlite',
-      host: join(__dirname, 'database.sqlite'),
+      dialect: process.env.DB_CONNECTION as any,
+      host: process.env.DB_HOST,
+      port: parseInt(process.env.DB_PORT),
+      username: process.env.DB_USERNAME,
+      password: process.env.DB_PASSWORD,
+      database: process.env.DB_DATABASE,
       autoLoadModels: true,
       models: [Order, Account],
       sync: {
@@ -24,6 +29,16 @@ import { ConfigModule } from '@nestjs/config';
         //force: true
       },
     }),
+    // SequelizeModule.forRoot({
+    //   dialect: 'sqlite',
+    //   host: join(__dirname, 'database.sqlite'),
+    //   autoLoadModels: true,
+    //   models: [Order, Account],
+    //   sync: {
+    //     alter: true,
+    //     //force: true
+    //   },
+    // }),
     AccountsModule,
   ],
   controllers: [AppController],
