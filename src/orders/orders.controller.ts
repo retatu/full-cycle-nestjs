@@ -1,8 +1,19 @@
-import { Controller, Get, Post, Body, Patch, Param, Delete, HttpCode, UseGuards } from '@nestjs/common';
+import { OrderStatus } from './entities/order.entity';
+import { TokenGuard } from './../accounts/token.guard';
+import {
+  Controller,
+  Get,
+  Post,
+  Body,
+  Patch,
+  Param,
+  Delete,
+  HttpCode,
+  UseGuards,
+} from '@nestjs/common';
 import { OrdersService } from './orders.service';
 import { CreateOrderDto } from './dto/create-order.dto';
 import { UpdateOrderDto } from './dto/update-order.dto';
-import { TokenGuard } from 'src/accounts/token.guard';
 
 @UseGuards(TokenGuard)
 @Controller('orders')
@@ -21,7 +32,7 @@ export class OrdersController {
 
   @Get(':id')
   findOne(@Param('id') id: string) {
-    return this.ordersService.findOne(id);
+    return this.ordersService.findOneUsingAccount(id);
   }
 
   @Patch(':id')
