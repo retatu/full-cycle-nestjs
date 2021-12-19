@@ -1,4 +1,4 @@
-GET http://localhost:3000/accounts
+GET http://localhost:3000/accounts/y8xazk3uzzc
 ###
 POST http://localhost:3000/accounts
 Content-Type: application/json

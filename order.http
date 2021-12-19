@@ -1,14 +1,17 @@
-GET http://localhost:3000/orders
-x-token: cd3ffqnidhl
+GET http://localhost:3000/orders/e549dbd6-e6dc-45cf-8aaf-abc07c37c821
+x-token: abjfvbedmo
 ###
 POST http://localhost:3000/orders
 Content-Type: application/json
-x-token: cd3ffqnidhl
+x-token: abjfvbedmo
 
 {
-  "amount": 123.12,
+  "amount": 977,
   "credit_card_name": "Matheus Rehbein",
-  "credit_card_number": "123123123"
+  "credit_card_number": "4556229836495866",
+  "cvv": "123",
+  "credit_card_expiration_month": 12,
+  "credit_card_expiration_year": 2022
 }
 ###
 GET http://localhost:3000/orders/1f396d34-9bf0-4917-ba97-4ef8959c951e

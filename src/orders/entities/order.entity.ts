@@ -12,7 +12,7 @@ import {
 export enum OrderStatus {
   Pending = 'pending',
   Approved = 'approved',
-  Rejected = 'rejected',
+  Rejected = 'rejected'
 }
 
 @Table({
@@ -22,7 +22,7 @@ export enum OrderStatus {
 })
 export class Order extends Model {
   @PrimaryKey
-  @Column({ type: DataType.UUID, defaultValue: DataType.UUID })
+  @Column({ type: DataType.UUID, defaultValue: DataType.UUIDV4 })
   id: string;
 
   @Column({ allowNull: false, type: DataType.DECIMAL(10, 2) })
