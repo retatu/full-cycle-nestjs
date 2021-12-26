@@ -1,9 +1,9 @@
-GET http://localhost:3000/orders/e549dbd6-e6dc-45cf-8aaf-abc07c37c821
-x-token: abjfvbedmo
+GET http://34.71.242.3/orders/
+x-token: jzxm5k8pu6s
 ###
-POST http://localhost:3000/orders
+POST http://34.71.242.3/orders/
 Content-Type: application/json
-x-token: abjfvbedmo
+x-token: jzxm5k8pu6s
 
 {
   "amount": 977,
